@@ -1,0 +1,24 @@
+{
+    "name": "GitHub Open Roslyn.io",
+    "version": "0.1",
+    "manifest_version": 2,
+
+    "description": "Chrome extension to navigate to source.roslyn.io from github Roslyn source",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": [ "src/roslyn-symbols.js" ]
+    },
+    //"content_scripts": [
+    //    {
+    //        "js": [ "src/roslyn-symbols.js" ],
+    //        "matches": [ "https://github.com/*" ]
+    //    }
+    //],
+    "permissions": [ "contextMenus" ],
+    "icons": {
+        "16": "icon.png"
+    },
+    "minimum_chrome_version": "20"
+}
