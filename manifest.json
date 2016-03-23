@@ -4,19 +4,15 @@
     "manifest_version": 2,
 
     "description": "Chrome extension to navigate to source.roslyn.io from github Roslyn source",
-    "browser_action": {
-        "default_icon": "Assets/icon16.png"
-    },
+    "homepage_url":  "https://github.com/jcouv/github-open-roslynio",
+    "author": "Julien Couvreur",
+
     "background": {
-        "scripts": [ "src/roslyn-symbols.js" ]
+        "scripts": [ "src/roslyn-symbols.js" ],
+        "persistent": false
     },
-    //"content_scripts": [
-    //    {
-    //        "js": [ "src/roslyn-symbols.js" ],
-    //        "matches": [ "https://github.com/*" ]
-    //    }
-    //],
     "permissions": [ "contextMenus" ],
+
     "icons": {
         "16": "Assets/icon16.png",
         "48": "Assets/icon48.png",
