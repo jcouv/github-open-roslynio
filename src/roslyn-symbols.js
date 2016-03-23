@@ -1,10 +1,11 @@
+
 var id = chrome.contextMenus.create(
 {
     "title": "Lookup on Roslyn.io",
     "type": "normal",
     "contexts": ["selection"],
     "onclick": genericOnClick,
-    "documentUrlPatterns": ["https://github.com/*"]
+    "documentUrlPatterns": ["https://github.com/*/roslyn/*"]
 });
 
 function genericOnClick(info, tab) {
@@ -14,6 +15,6 @@ function genericOnClick(info, tab) {
     //console.log("tab: " + JSON.stringify(tab));
     chrome.tabs.create({
         selected: true,
-        url: "http://source.roslyn.io/#q="+info.selectionText 
+        url: "http://source.roslyn.io/#q=" + info.selectionText
     });
 }

@@ -5,7 +5,7 @@
 
     "description": "Chrome extension to navigate to source.roslyn.io from github Roslyn source",
     "browser_action": {
-        "default_icon": "icon.png"
+        "default_icon": "Assets/icon16.png"
     },
     "background": {
         "scripts": [ "src/roslyn-symbols.js" ]
@@ -18,7 +18,9 @@
     //],
     "permissions": [ "contextMenus" ],
     "icons": {
-        "16": "icon.png"
+        "16": "Assets/icon16.png",
+        "48": "Assets/icon48.png",
+        "128": "Assets/icon128.png"
     },
     "minimum_chrome_version": "20"
 }
